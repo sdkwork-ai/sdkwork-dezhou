@@ -18,14 +18,17 @@
 
 BEGIN;
 
+ALTER TABLE dezhou_table ADD COLUMN IF NOT EXISTS organization_id TEXT NOT NULL DEFAULT '0';
 UPDATE dezhou_table SET organization_id = '0' WHERE organization_id IS NULL;
 ALTER TABLE dezhou_table ALTER COLUMN organization_id SET DEFAULT '0';
 ALTER TABLE dezhou_table ALTER COLUMN organization_id SET NOT NULL;
 
+ALTER TABLE dezhou_seat ADD COLUMN IF NOT EXISTS organization_id TEXT NOT NULL DEFAULT '0';
 UPDATE dezhou_seat SET organization_id = '0' WHERE organization_id IS NULL;
 ALTER TABLE dezhou_seat ALTER COLUMN organization_id SET DEFAULT '0';
 ALTER TABLE dezhou_seat ALTER COLUMN organization_id SET NOT NULL;
 
+ALTER TABLE dezhou_hand ADD COLUMN IF NOT EXISTS organization_id TEXT NOT NULL DEFAULT '0';
 UPDATE dezhou_hand SET organization_id = '0' WHERE organization_id IS NULL;
 ALTER TABLE dezhou_hand ALTER COLUMN organization_id SET DEFAULT '0';
 ALTER TABLE dezhou_hand ALTER COLUMN organization_id SET NOT NULL;
