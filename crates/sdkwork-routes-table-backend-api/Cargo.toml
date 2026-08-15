@@ -13,6 +13,6 @@ path = "src/lib.rs"
 axum.workspace = true
 serde.workspace = true
 sdkwork_dezhou_table_service.workspace = true
-sdkwork_routes_table_app_api = { package = "sdkwork-routes-table-app-api", path = "../sdkwork-routes-table-app-api" }
+sdkwork_routes_table_app_api = { workspace = true, package = "sdkwork-routes-table-app-api" }
 sdkwork-web-axum.workspace = true
 sdkwork-web-core.workspace = true

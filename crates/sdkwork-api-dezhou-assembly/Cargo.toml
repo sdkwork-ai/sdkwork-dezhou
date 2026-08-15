@@ -14,8 +14,8 @@ tokio.workspace = true
 sdkwork-web-bootstrap.workspace = true
 sdkwork-database-sqlx.workspace = true
 sdkwork_dezhou_service_host.workspace = true
-sdkwork-routes-table-app-api = { path = "../sdkwork-routes-table-app-api" }
-sdkwork-routes-table-backend-api = { path = "../sdkwork-routes-table-backend-api" }
+sdkwork_routes_table_app_api.workspace = true
+sdkwork_routes_table_backend_api.workspace = true
 
 [dev-dependencies]
 sdkwork_dezhou_table_repository_sqlx.workspace = true
