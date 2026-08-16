@@ -20,7 +20,7 @@
     "layerRole": "runtime-gateway",
     "publicExports": [],
     "requiredPorts": [
-      { "name": "applicationApiAssembly", "export": "sdkwork-api-dezhou-assembly" }
+      { "name": "applicationApiAssembly", "export": "sdkwork_api_dezhou_assembly::assemble_api_router", "provider": "sdkwork-api-dezhou-assembly" }
     ],
     "runtimeEntrypoints": ["src/main.rs"],
     "sdkDependencies": [],
