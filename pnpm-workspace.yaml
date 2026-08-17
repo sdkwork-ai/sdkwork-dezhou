@@ -5,9 +5,7 @@ packages:
   - "apps/sdkwork-dezhou-pc/packages/*"
   - "sdks/*"
   - "sdks/sdkwork-dezhou-app-sdk/sdkwork-dezhou-app-sdk-typescript"
-  - "sdks/sdkwork-dezhou-app-sdk/sdkwork-dezhou-app-sdk-typescript/generated/server-openapi"
   - "sdks/sdkwork-dezhou-backend-sdk/sdkwork-dezhou-backend-sdk-typescript"
-  - "sdks/sdkwork-dezhou-backend-sdk/sdkwork-dezhou-backend-sdk-typescript/generated/server-openapi"
   - "../sdkwork-iam/apps/sdkwork-iam-common/packages/sdkwork-iam-contracts"
   - "../sdkwork-iam/apps/sdkwork-iam-common/packages/sdkwork-iam-runtime"
   - "../sdkwork-iam/apps/sdkwork-iam-common/packages/sdkwork-iam-sdk-ports"
@@ -31,8 +29,8 @@ packages:
   - "../sdkwork-app-topology"
   - "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript/src/index.ts"
   - "../sdkwork-iam/sdks/sdkwork-iam-backend-sdk/sdkwork-iam-backend-sdk-typescript/src/index.ts"
-
   - "../sdkwork-iam/apps/sdkwork-iam-pc/packages/sdkwork-user-center-core-pc-react"
+
 catalog:
   "@monaco-editor/react": ^4.7.0
   "@playwright/test": ^1.52.0
