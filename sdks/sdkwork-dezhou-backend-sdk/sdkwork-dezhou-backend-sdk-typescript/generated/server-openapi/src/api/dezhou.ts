@@ -1,7 +1,7 @@
 import { backendApiPath } from './paths';
-import type { HttpClient } from '../http/client';
+import type { ApiRequestOptions, HttpClient } from '../http/client';
 
-import type { DezhouApiResult } from '../types';
+import type { DezhouTableItem, PageInfo } from '../types';
 
 
 export interface DezhouBackendDezhouTableListParams {
@@ -18,44 +18,38 @@ export class DezhouBackendDezhouTableApi {
   }
 
 
-async list(params?: DezhouBackendDezhouTableListParams): Promise<DezhouApiResult> {
+async list(params?: DezhouBackendDezhouTableListParams, requestOptions?: ApiRequestOptions): Promise<{ items: DezhouTableItem[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'page', value: params?.page, style: 'form', explode: true, allowReserved: false },
       { name: 'page_size', value: params?.pageSize, style: 'form', explode: true, allowReserved: false },
       { name: 'status', value: params?.status, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<DezhouApiResult>(appendQueryString(backendApiPath(`/tables`), query));
+    return this.client.request<{ items: DezhouTableItem[]; pageInfo: PageInfo; }>(appendQueryString(backendApiPath(`/tables`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 }
 
 export class DezhouBackendDezhouApi {
-  private client: HttpClient;
   public readonly table: DezhouBackendDezhouTableApi;
 
   constructor(client: HttpClient) {
-    this.client = client;
     this.table = new DezhouBackendDezhouTableApi(client);
   }
 
 }
 
 export class DezhouBackendApi {
-  private client: HttpClient;
   public readonly dezhou: DezhouBackendDezhouApi;
 
   constructor(client: HttpClient) {
-    this.client = client;
     this.dezhou = new DezhouBackendDezhouApi(client);
   }
 
 }
 
 export class DezhouApi {
-  private client: HttpClient;
   public readonly backend: DezhouBackendApi;
 
   constructor(client: HttpClient) {
-    this.client = client;
     this.backend = new DezhouBackendApi(client);
   }
 

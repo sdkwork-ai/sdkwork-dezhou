@@ -27,7 +27,12 @@ client.setAuthToken('your-auth-token');
 client.setAccessToken('your-access-token');
 
 // Use the SDK
-const result = await client.health.dezhou.health.check();
+const params = {
+  page: 1,
+  page_size: 2,
+  status: 'status',
+};
+const result = await client.dezhou.table.list(params);
 ```
 
 ## Authentication
@@ -54,17 +59,9 @@ const client = new SdkworkDezhouAppClient({
 
 ## API Modules
 
-- `client.health` - health API
 - `client.dezhou` - dezhou API
 
 ## Usage Examples
-
-### health
-
-```typescript
-// GET /app/v3/api/system/health
-const result = await client.health.dezhou.health.check();
-```
 
 ### dezhou
 
@@ -84,7 +81,12 @@ const result = await client.dezhou.table.list(params);
 import { SdkworkDezhouAppClient, NetworkError, TimeoutError, AuthenticationError } from '@sdkwork-internal/dezhou-app-sdk-generated';
 
 try {
-  const result = await client.health.dezhou.health.check();
+  const params = {
+    page: 1,
+    page_size: 2,
+    status: 'status',
+  };
+  const result = await client.dezhou.table.list(params);
 } catch (error) {
   if (error instanceof AuthenticationError) {
     console.error('Authentication failed:', error.message);
@@ -104,6 +106,8 @@ This SDK includes cross-platform publish scripts in `bin/`:
 - `bin/publish-core.mjs`
 - `bin/publish.sh`
 - `bin/publish.ps1`
+
+TypeScript check and publish commands use pnpm to materialize workspace dependency versions in a temporary tarball. They reject local-only dependency protocols before npm publication and do not rewrite the source `package.json`.
 
 ### Check
 

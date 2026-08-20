@@ -4,4 +4,6 @@ export interface ProblemDetail {
   status: number;
   detail?: string;
   instance?: string;
+  code: number;
+  traceId: string;
 }

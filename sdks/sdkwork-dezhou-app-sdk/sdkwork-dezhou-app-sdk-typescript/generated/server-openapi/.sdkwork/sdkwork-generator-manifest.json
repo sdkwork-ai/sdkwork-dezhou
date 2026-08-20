@@ -12,7 +12,7 @@
   "generatedFiles": [
     {
       "path": "bin/publish-core.mjs",
-      "sha256": "98ad0918a78bfbe22bf8f12fec709b0bed545b9e01edd40f5e4abf31a23378a5"
+      "sha256": "a47e95119bf3eafcbcb2102f7024c147f967924e4e3f343d1a29effb4b6765df"
     },
     {
       "path": "bin/publish.ps1",
@@ -40,31 +40,27 @@
     },
     {
       "path": "package.json",
-      "sha256": "0a0fd401fd5e184e85d261e7b24177d3397fe97493301ee47ce35769fccadd36"
+      "sha256": "b27457c86a5f8448f347401893d2a1127012f4cb8f64958076c27c7174f4a10b"
     },
     {
       "path": "README.md",
-      "sha256": "b76067a00607ba2715566229ee9a5e2aa5d76ff64079b912d66ba3d0cc8e192a"
+      "sha256": "bf59580e1d00dd66a5ede7ec94f9d7a287153a628552a512e0b375e5068f9a82"
     },
     {
       "path": "sdkwork-sdk.json",
-      "sha256": "e240045ce8d08b0488c60abb450995040dd1f83616cff0f0335bff230d6112c7"
+      "sha256": "bb00bc28e5086002a9347005869eb6289b72e6392e7d9caebc9637c2d334f88d"
     },
     {
       "path": "src/api/base.ts",
-      "sha256": "02ad25e6bf331ff241ba387c2947ddf1900dd849038e08c2757416a3aa788a04"
+      "sha256": "94d136c54a008dfe7602e373a0b2c79176bbf2fc6e7c899fc23b1f12f750380f"
     },
     {
       "path": "src/api/dezhou.ts",
-      "sha256": "5c5b441c3ac7651b0eabadd48a767391edd26843770830aa460bdefa16f86270"
-    },
-    {
-      "path": "src/api/health.ts",
-      "sha256": "7d6c3643c6b519438998a04b8cbfc1727f6f56003d3824a8d3974ba4c77be66e"
+      "sha256": "126830beb788c2315e22944cb652539a1c3d089732ff90730305ab68aba335f0"
     },
     {
       "path": "src/api/index.ts",
-      "sha256": "aa5ea68094fc8095c5e5d15b2618b2f1121b4c04bb45fb54fcbe5c60bdda2f99"
+      "sha256": "82f48b529d44bd5b9906be494d4da70942ce12fc916ed6db1c4b7b4d9f739306"
     },
     {
       "path": "src/api/paths.ts",
@@ -76,7 +72,7 @@
     },
     {
       "path": "src/http/client.ts",
-      "sha256": "7c5521163579261418c56e8126b0389dd78be9e0931e5e6064749c7cc9df0edc"
+      "sha256": "868b7785497a93658b628de2d9b520d9d2456406bcf2ef717319beaa6913146d"
     },
     {
       "path": "src/http/index.ts",
@@ -88,35 +84,39 @@
     },
     {
       "path": "src/sdk.ts",
-      "sha256": "d04fa0790b8336e10632de1afab9a5b83a6bbed4f85b3e2d08f00e9c895c82cd"
+      "sha256": "094743d57b5734bab768381de0e8b01e885d8e22976b9c2ecb4a7e3fbeb18a1d"
     },
     {
       "path": "src/types/common.ts",
       "sha256": "d2506be8c4bdbe8e7059393467e6e71d75ef1d8c018dbf997bb0ab2a77b6c7b6"
     },
     {
-      "path": "src/types/dezhou-api-result.ts",
-      "sha256": "93cca7ad3d57b48b70c78600288428ddc6abaebbc5e5771ff1fa8320abe0c0e3"
-    },
-    {
-      "path": "src/types/dezhou-health-response.ts",
-      "sha256": "7f2a6b15fc0cb0db42169b689732babe85c735b20ad4efde22c3411a85046d0c"
-    },
-    {
       "path": "src/types/dezhou-table-item.ts",
       "sha256": "359d9ed3517e3804862aee2ca23bbdf3c84f6928a0c4158d11826f4817b69cf6"
     },
     {
-      "path": "src/types/dezhou-table-page.ts",
-      "sha256": "f8eb1232e3bd062997cc119151c203caf4b8ca779f61e083eac50f2bf07da01a"
+      "path": "src/types/dezhou-table-list-response.ts",
+      "sha256": "da7a133d79ae21f5c3f2944555c61493f90f645a763786525c0b9e7d6db348db"
+    },
+    {
+      "path": "src/types/dezhou-table-response.ts",
+      "sha256": "ccae8515e579f2585acb4fb61328421a38ef0f730e3e7e8f50081fad88cb4e57"
     },
     {
       "path": "src/types/index.ts",
-      "sha256": "5c35b67348bda20c8a9eefaa2f914c539e20298376a122be65f474c35570ab20"
+      "sha256": "67995b4c8f5a2af2ae1d44dff3d57a4826411dec7f646d505a62b3f09a0264b9"
+    },
+    {
+      "path": "src/types/page-info.ts",
+      "sha256": "f8359fb19e40ebbed52a2035e88e2d0597714cd8d8de02bc435176d28f6095ad"
     },
     {
       "path": "src/types/problem-detail.ts",
-      "sha256": "46b7995d1fe77bd7511e83e69fef6a0afaf697d0a0b612d651af5591854453cf"
+      "sha256": "86ddd0a5bee6221fbe98858c8367b19710de87cab86fa63ef1b5aff98c598f2c"
+    },
+    {
+      "path": "src/types/sdk-work-api-response.ts",
+      "sha256": "b0e8a26047d6002f67c43b0accaebb34d4d7a4d6ba8f77c55ed9bd0a9036cc77"
     },
     {
       "path": "tsconfig.json",

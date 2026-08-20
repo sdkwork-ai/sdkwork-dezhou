@@ -12,7 +12,7 @@
   "generatedFiles": [
     {
       "path": "bin/publish-core.mjs",
-      "sha256": "98ad0918a78bfbe22bf8f12fec709b0bed545b9e01edd40f5e4abf31a23378a5"
+      "sha256": "a47e95119bf3eafcbcb2102f7024c147f967924e4e3f343d1a29effb4b6765df"
     },
     {
       "path": "bin/publish.ps1",
@@ -40,23 +40,23 @@
     },
     {
       "path": "package.json",
-      "sha256": "7be961dedebb89e1c5d50e5d791a3cf73c915ae978cdc901950688bd012d6486"
+      "sha256": "5c489bd47a7ffd49a9d28e287736b81bdc31979845365dbc618bc358af3431b1"
     },
     {
       "path": "README.md",
-      "sha256": "502c5045170df44bf9ce741b776353c83272486c162266a287013f0fb1b43ef2"
+      "sha256": "a129ca1964bd1df0a2d3e225d6894162b6f3d85a311644ec9b082b20ce3b1376"
     },
     {
       "path": "sdkwork-sdk.json",
-      "sha256": "926572a1e6897d4fc92e094be99ce2a08e5185d12c71b961bfd1ad56d6b8a873"
+      "sha256": "81cf4c4affaf5730590db9700f99f64a8045e7f57072bda8d3f2d18205f6a0f7"
     },
     {
       "path": "src/api/base.ts",
-      "sha256": "02ad25e6bf331ff241ba387c2947ddf1900dd849038e08c2757416a3aa788a04"
+      "sha256": "94d136c54a008dfe7602e373a0b2c79176bbf2fc6e7c899fc23b1f12f750380f"
     },
     {
       "path": "src/api/dezhou.ts",
-      "sha256": "e17b0f1558efcbcc059697c146af98db1dc9c28112391884c109503c2384e4e0"
+      "sha256": "fb43fa587e2ea3d87be4fc21dfc8031d9a96908f7428daa666228ea9fe987860"
     },
     {
       "path": "src/api/index.ts",
@@ -72,7 +72,7 @@
     },
     {
       "path": "src/http/client.ts",
-      "sha256": "1d339275acee6ec54660a32eb9effcc718ebf0992c5e9bfdb80a3452e0702137"
+      "sha256": "bab0f740731f04f1f6e3c591cba91b1577f0ca521054d187755f437925d3dc6d"
     },
     {
       "path": "src/http/index.ts",
@@ -91,28 +91,32 @@
       "sha256": "351d721c3c6f48f4453f92276856105120d72eb8d2fa9cd28de8e3854bf10f6c"
     },
     {
-      "path": "src/types/dezhou-api-result.ts",
-      "sha256": "93cca7ad3d57b48b70c78600288428ddc6abaebbc5e5771ff1fa8320abe0c0e3"
-    },
-    {
-      "path": "src/types/dezhou-health-response.ts",
-      "sha256": "7f2a6b15fc0cb0db42169b689732babe85c735b20ad4efde22c3411a85046d0c"
-    },
-    {
       "path": "src/types/dezhou-table-item.ts",
       "sha256": "359d9ed3517e3804862aee2ca23bbdf3c84f6928a0c4158d11826f4817b69cf6"
     },
     {
-      "path": "src/types/dezhou-table-page.ts",
-      "sha256": "f8eb1232e3bd062997cc119151c203caf4b8ca779f61e083eac50f2bf07da01a"
+      "path": "src/types/dezhou-table-list-response.ts",
+      "sha256": "da7a133d79ae21f5c3f2944555c61493f90f645a763786525c0b9e7d6db348db"
+    },
+    {
+      "path": "src/types/dezhou-table-response.ts",
+      "sha256": "ccae8515e579f2585acb4fb61328421a38ef0f730e3e7e8f50081fad88cb4e57"
     },
     {
       "path": "src/types/index.ts",
-      "sha256": "5c35b67348bda20c8a9eefaa2f914c539e20298376a122be65f474c35570ab20"
+      "sha256": "67995b4c8f5a2af2ae1d44dff3d57a4826411dec7f646d505a62b3f09a0264b9"
+    },
+    {
+      "path": "src/types/page-info.ts",
+      "sha256": "f8359fb19e40ebbed52a2035e88e2d0597714cd8d8de02bc435176d28f6095ad"
     },
     {
       "path": "src/types/problem-detail.ts",
-      "sha256": "46b7995d1fe77bd7511e83e69fef6a0afaf697d0a0b612d651af5591854453cf"
+      "sha256": "86ddd0a5bee6221fbe98858c8367b19710de87cab86fa63ef1b5aff98c598f2c"
+    },
+    {
+      "path": "src/types/sdk-work-api-response.ts",
+      "sha256": "b0e8a26047d6002f67c43b0accaebb34d4d7a4d6ba8f77c55ed9bd0a9036cc77"
     },
     {
       "path": "tsconfig.json",

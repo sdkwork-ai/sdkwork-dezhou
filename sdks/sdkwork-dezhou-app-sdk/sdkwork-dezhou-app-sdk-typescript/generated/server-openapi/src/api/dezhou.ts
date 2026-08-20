@@ -1,7 +1,7 @@
 import { appApiPath } from './paths';
-import type { HttpClient } from '../http/client';
+import type { ApiRequestOptions, HttpClient } from '../http/client';
 
-import type { DezhouApiResult } from '../types';
+import type { DezhouTableItem, PageInfo } from '../types';
 
 
 export interface DezhouTableListParams {
@@ -18,26 +18,24 @@ export class DezhouTableApi {
   }
 
 
-async list(params?: DezhouTableListParams): Promise<DezhouApiResult> {
+async list(params?: DezhouTableListParams, requestOptions?: ApiRequestOptions): Promise<{ items: DezhouTableItem[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'page', value: params?.page, style: 'form', explode: true, allowReserved: false },
       { name: 'page_size', value: params?.pageSize, style: 'form', explode: true, allowReserved: false },
       { name: 'status', value: params?.status, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<DezhouApiResult>(appendQueryString(appApiPath(`/tables`), query));
+    return this.client.request<{ items: DezhouTableItem[]; pageInfo: PageInfo; }>(appendQueryString(appApiPath(`/tables`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 
-async retrieve(tableId: string): Promise<DezhouApiResult> {
-    return this.client.get<DezhouApiResult>(appApiPath(`/tables/${serializePathParameter(tableId, { name: 'tableId', style: 'simple', explode: false })}`));
+async retrieve(tableId: string, requestOptions?: ApiRequestOptions): Promise<DezhouTableItem> {
+    return this.client.request<DezhouTableItem>(appApiPath(`/tables/${serializePathParameter(tableId, { name: 'tableId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 }
 
 export class DezhouApi {
-  private client: HttpClient;
   public readonly table: DezhouTableApi;
 
   constructor(client: HttpClient) {
-    this.client = client;
     this.table = new DezhouTableApi(client);
   }
 
