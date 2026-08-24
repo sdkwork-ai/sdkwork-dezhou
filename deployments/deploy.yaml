@@ -40,6 +40,38 @@ profiles:
         tls: dtupay.cn
         mode: web+api
         web: adaptive
+      - domain: dezhou-dev.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.86offer.cn
+        tls: 86offer.cn
+        mode: web+api
+        web: adaptive
     packages: []
     overrides:
       topology:
@@ -83,6 +115,38 @@ profiles:
         web: adaptive
       - domain: dezhou.dtupay.cn
         tls: dtupay.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.86offer.cn
+        tls: 86offer.cn
         mode: web+api
         web: adaptive
     packages: []
@@ -130,6 +194,38 @@ profiles:
         tls: dtupay.cn
         mode: web+api
         web: adaptive
+      - domain: dezhou-dev.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou-dev.86offer.cn
+        tls: 86offer.cn
+        mode: web+api
+        web: adaptive
     packages: []
     overrides:
       topology:
@@ -173,6 +269,38 @@ profiles:
         web: adaptive
       - domain: dezhou.dtupay.cn
         tls: dtupay.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+      - domain: dezhou.86offer.cn
+        tls: 86offer.cn
         mode: web+api
         web: adaptive
     packages: []
