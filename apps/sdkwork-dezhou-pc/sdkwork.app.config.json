@@ -8,7 +8,7 @@
     "description": "PC browser application for SDKWork Texas Hold'em poker tables.",
     "vendor": "SDKWork",
     "officialWebsiteUrl": "https://sdkwork.com/apps/sdkwork-dezhou-pc",
-    "appType": "APP_WEB",
+    "appType": "APP_HTML",
     "versionSource": "package.json",
     "identifiers": {
       "packageName": null,
@@ -27,7 +27,7 @@
     "tenantId": "100001"
   },
   "runtime": {
-    "family": "pc",
+    "family": "server",
     "framework": "react",
     "runtimes": [
       "BROWSER"
@@ -52,22 +52,74 @@
         "id": "sdkwork-dezhou-pc-primary-icon",
         "type": "ICON",
         "purpose": "PRIMARY",
-        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou/assets/icon-1024.png",
-        "platform": "WEB",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou-pc/assets/icon-1024.png",
+        "platform": "APP",
         "locale": "en-US",
         "width": 1024,
         "height": 1024,
         "format": "PNG",
-        "enabled": true
+        "fileSizeBytes": 524288,
+        "alphaChannel": false,
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true
+        }
       },
       "platform": [],
-      "metadata": {}
+      "metadata": {
+        "generatedPlaceholder": true
+      }
     },
-    "screenshots": [],
-    "previews": [],
+    "screenshots": [
+      {
+        "id": "sdkwork-dezhou-pc-web-screenshot",
+        "type": "SCREENSHOT",
+        "purpose": "CATALOG_SCREENSHOT",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou-pc/media/web-screenshot.png",
+        "platform": "WEB",
+        "locale": "en-US",
+        "deviceClass": "BROWSER",
+        "displayType": "WEB_DESKTOP",
+        "width": 1920,
+        "height": 1080,
+        "format": "PNG",
+        "fileSizeBytes": 1048576,
+        "alphaChannel": false,
+        "caption": "SDKWork Dezhou product screenshot.",
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork Dezhou app screenshot."
+        }
+      }
+    ],
+    "previews": [
+      {
+        "id": "sdkwork-dezhou-pc-catalog-preview",
+        "type": "PREVIEW_IMAGE",
+        "purpose": "CATALOG_PREVIEW",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou-pc/media/preview-cover.png",
+        "platform": "WEB",
+        "locale": "en-US",
+        "width": 1600,
+        "height": 900,
+        "format": "PNG",
+        "fileSizeBytes": 786432,
+        "alphaChannel": false,
+        "caption": "SDKWork Dezhou preview.",
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork Dezhou preview cover."
+        }
+      }
+    ],
     "metadata": {
       "assetVersion": "0.1.0",
-      "defaultLocale": "zh-CN"
+      "defaultLocale": "en-US"
     }
   },
   "publish": {
@@ -84,6 +136,9 @@
     "config": {
       "workspaceRoot": ".",
       "framework": "react"
+    },
+    "installSkill": {
+      "name": "sdkwork-skills-app"
     }
   },
   "environments": {
@@ -101,6 +156,9 @@
   "artifacts": {
     "installConfig": {
       "defaultPackageId": "web-browser-standalone-zip",
+      "installCommand": "sdkwork install sdkwork-dezhou-pc",
+      "launchCommand": "sdkwork open sdkwork-dezhou-pc",
+      "uninstallCommand": "sdkwork uninstall sdkwork-dezhou-pc",
       "packages": [
         {
           "id": "web-browser-standalone-zip",
@@ -111,7 +169,27 @@
           "architecture": "x64",
           "deploymentProfile": "standalone",
           "runtimeTarget": "browser",
-          "enabled": true
+          "enabled": true,
+          "profileBinding": "fixed",
+          "targetPlatform": "web",
+          "clientArchitecture": "pc-web",
+          "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou-pc/STABLE/0.1.0/web-browser-standalone-zip-0.1.0.zip"
+        },
+        {
+          "id": "linux-x64-cloud-server-tar-gz",
+          "name": "Sdkwork Dezhou Pc cloud server archive",
+          "sourceType": "BINARY_URL",
+          "packageFormat": "TAR_GZ",
+          "platform": "API",
+          "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou-pc/STABLE/0.1.0/linux-x64-cloud-server-tar-gz-0.1.0.tar.gz",
+          "architecture": "x64",
+          "checksumAlgorithm": "SHA-256",
+          "checksum": "e57824e446a37af7ec37158b3d4d73bb62ea07dab81d85c9f2d01ad8a35f3873",
+          "deploymentProfile": "cloud",
+          "runtimeTarget": "server",
+          "profileBinding": "fixed",
+          "enabled": true,
+          "metadata": {}
         }
       ],
       "metadata": {
@@ -126,7 +204,29 @@
     "latest": {
       "STABLE": "0.1.0"
     },
-    "notes": []
+    "notes": [
+      {
+        "version": "0.1.0",
+        "releaseChannel": "STABLE",
+        "title": "SDKWork Dezhou 0.1.0",
+        "summary": "SDKWork Dezhou initialized standard release.",
+        "content": "Initial SDKWork App Standard v3 manifest for SDKWork Dezhou.",
+        "highlights": [
+          "SDKWork App Standard v3 configuration initialized",
+          "platform_app projection metadata standardized",
+          "Download package matrix normalized"
+        ],
+        "packageIds": [
+          "web-browser-standalone-zip",
+          "linux-x64-cloud-server-tar-gz"
+        ],
+        "publishedAt": "2026-05-07T00:00:00Z",
+        "current": true,
+        "forceUpdate": false,
+        "minSupportedVersion": "0.1.0",
+        "metadata": {}
+      }
+    ]
   },
   "security": {
     "checksumRequired": false,
@@ -141,21 +241,11 @@
     },
     "sourceRoot": "."
   },
-  "sdk": {
-    "appApiAuthority": "sdkwork-dezhou-app-api",
-    "backendApiAuthority": "sdkwork-dezhou-backend-api",
-    "appSdkFamily": "sdkwork-dezhou-app-sdk",
-    "backendSdkFamily": "sdkwork-dezhou-backend-sdk"
-  },
-  "specs": {
-    "root": "../../../sdkwork-specs",
-    "architecture": "APP_PC_ARCHITECTURE_SPEC.md",
-    "ui": "APP_PC_REACT_UI_SPEC.md"
-  },
   "metadata": {
     "domain": "game",
     "capability": "table",
     "owner": "sdkwork-dezhou",
-    "applicationRoot": "../.."
+    "applicationRoot": "../..",
+    "standardOwner": "sdkwork-platform"
   }
 }

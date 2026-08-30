@@ -17,7 +17,7 @@
   "paths": {
     "/app/v3/api/tables": {
       "get": {
-        "operationId": "dezhou.table.list",
+        "operationId": "table.list",
         "tags": [
           "dezhou"
         ],
@@ -61,7 +61,7 @@
     },
     "/app/v3/api/tables/{tableId}": {
       "get": {
-        "operationId": "dezhou.table.retrieve",
+        "operationId": "table.retrieve",
         "tags": [
           "dezhou"
         ],

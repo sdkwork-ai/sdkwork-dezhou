@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "kind": "sdkwork.app.config",
+  "schemaVersion": 3,
+  "kind": "sdkwork.app",
   "app": {
     "name": "sdkwork-dezhou",
     "displayName": "SDKWork Dezhou",
@@ -13,30 +13,6 @@
     "appType": "APP_HTML",
     "officialWebsiteUrl": "https://sdkwork.com/apps/sdkwork-dezhou"
   },
-  "runtime": {
-    "apiBaseUrl": "http://localhost:8096",
-    "appApiPrefix": "/app/v3/api",
-    "backendApiPrefix": "/backend/v3/api",
-    "supportedDeploymentProfiles": [
-      "standalone",
-      "cloud"
-    ],
-    "defaultDeploymentProfile": "standalone"
-  },
-  "sdk": {
-    "appApiAuthority": "sdkwork-dezhou-app-api",
-    "backendApiAuthority": "sdkwork-dezhou-backend-api",
-    "appSdkFamily": "sdkwork-dezhou-app-sdk",
-    "backendSdkFamily": "sdkwork-dezhou-backend-sdk"
-  },
-  "sdkDependencies": [],
-  "dependencyApiExports": [],
-  "dependencyApiSurfaces": [],
-  "features": {
-    "tables": true,
-    "seats": true,
-    "handHistory": true
-  },
   "backend": {
     "profileKey": "backend-root-admin",
     "accessTokenPermissionScope": [
@@ -47,5 +23,193 @@
     ],
     "tenantId": "100001",
     "organizationId": "0"
+  },
+  "runtime": {
+    "apiBaseUrl": "http://localhost:8096",
+    "appApiPrefix": "/app/v3/api",
+    "backendApiPrefix": "/backend/v3/api",
+    "supportedDeploymentProfiles": [
+      "standalone",
+      "cloud"
+    ],
+    "defaultDeploymentProfile": "standalone",
+    "family": "server",
+    "framework": "rust-axum"
+  },
+  "media": {
+    "icons": {
+      "primary": {
+        "id": "sdkwork-dezhou-primary-icon",
+        "type": "ICON",
+        "purpose": "PRIMARY",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou/assets/icon-1024.png",
+        "platform": "APP",
+        "locale": "en-US",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "fileSizeBytes": 524288,
+        "alphaChannel": false,
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true
+        }
+      },
+      "platform": [],
+      "metadata": {
+        "generatedPlaceholder": true
+      }
+    },
+    "screenshots": [
+      {
+        "id": "sdkwork-dezhou-web-screenshot",
+        "type": "SCREENSHOT",
+        "purpose": "CATALOG_SCREENSHOT",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou/media/web-screenshot.png",
+        "platform": "WEB",
+        "locale": "en-US",
+        "deviceClass": "BROWSER",
+        "displayType": "WEB_DESKTOP",
+        "width": 1920,
+        "height": 1080,
+        "format": "PNG",
+        "fileSizeBytes": 1048576,
+        "alphaChannel": false,
+        "caption": "SDKWork Dezhou product screenshot.",
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork Dezhou app screenshot."
+        }
+      }
+    ],
+    "previews": [
+      {
+        "id": "sdkwork-dezhou-catalog-preview",
+        "type": "PREVIEW_IMAGE",
+        "purpose": "CATALOG_PREVIEW",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou/media/preview-cover.png",
+        "platform": "WEB",
+        "locale": "en-US",
+        "width": 1600,
+        "height": 900,
+        "format": "PNG",
+        "fileSizeBytes": 786432,
+        "alphaChannel": false,
+        "caption": "SDKWork Dezhou preview.",
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork Dezhou preview cover."
+        }
+      }
+    ],
+    "metadata": {
+      "assetVersion": "0.1.0",
+      "defaultLocale": "en-US"
+    }
+  },
+  "publish": {
+    "status": "ACTIVE",
+    "platforms": [
+      "WEB"
+    ],
+    "installPlatforms": [
+      "WEB"
+    ],
+    "defaultPackageId": "linux-x64-standalone-server-tar-gz",
+    "installSkill": {
+      "name": "sdkwork-skills-app"
+    },
+    "stores": [],
+    "storeUrl": "https://sdkwork.com/apps/sdkwork-dezhou"
+  },
+  "artifacts": {
+    "installConfig": {
+      "defaultPackageId": "linux-x64-standalone-server-tar-gz",
+      "installCommand": "sdkwork install sdkwork-dezhou",
+      "launchCommand": "sdkwork open sdkwork-dezhou",
+      "uninstallCommand": "sdkwork uninstall sdkwork-dezhou",
+      "packages": [
+        {
+          "id": "linux-x64-standalone-server-tar-gz",
+          "name": "Sdkwork Dezhou standalone server archive",
+          "sourceType": "BINARY_URL",
+          "packageFormat": "TAR_GZ",
+          "platform": "API",
+          "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou/STABLE/0.1.0/linux-x64-standalone-server-tar-gz-0.1.0.tar.gz",
+          "architecture": "x64",
+          "checksumAlgorithm": "SHA-256",
+          "checksum": "d0c14a7b02096336df018361ec587c389a2e4b3fe5f6ad2cf455b55ef5c13897",
+          "deploymentProfile": "standalone",
+          "runtimeTarget": "server",
+          "profileBinding": "fixed",
+          "enabled": true,
+          "metadata": {
+            "releaseBuildDeferred": false
+          }
+        },
+        {
+          "id": "linux-x64-cloud-server-tar-gz",
+          "name": "Sdkwork Dezhou cloud server archive",
+          "sourceType": "BINARY_URL",
+          "packageFormat": "TAR_GZ",
+          "platform": "API",
+          "url": "https://cdn.sdkwork.com/apps/sdkwork-dezhou/STABLE/0.1.0/linux-x64-cloud-server-tar-gz-0.1.0.tar.gz",
+          "architecture": "x64",
+          "checksumAlgorithm": "SHA-256",
+          "checksum": "07afb21971460da9a3a0bd4e5cec9efa917bed302034b90bb166125e70cf23a5",
+          "deploymentProfile": "cloud",
+          "runtimeTarget": "server",
+          "profileBinding": "fixed",
+          "enabled": true,
+          "metadata": {
+            "releaseBuildDeferred": false
+          }
+        }
+      ]
+    }
+  },
+  "release": {
+    "currentVersion": "0.1.0",
+    "defaultChannel": "STABLE",
+    "latest": {
+      "STABLE": "0.1.0"
+    },
+    "notes": [
+      {
+        "version": "0.1.0",
+        "releaseChannel": "STABLE",
+        "title": "SDKWork Dezhou 0.1.0",
+        "summary": "SDKWork Dezhou initialized standard release.",
+        "content": "Initial SDKWork App Standard v3 manifest for SDKWork Dezhou.",
+        "highlights": [
+          "SDKWork App Standard v3 configuration initialized",
+          "platform_app projection metadata standardized",
+          "Download package matrix normalized"
+        ],
+        "packageIds": [
+          "linux-x64-standalone-server-tar-gz",
+          "linux-x64-cloud-server-tar-gz"
+        ],
+        "publishedAt": "2026-05-07T00:00:00Z",
+        "current": true,
+        "forceUpdate": false,
+        "minSupportedVersion": "0.1.0",
+        "metadata": {}
+      }
+    ]
+  },
+  "security": {
+    "checksumRequired": false,
+    "signatureRequired": false,
+    "sbomRequired": false
+  },
+  "metadata": {
+    "deploymentConfig": "etc/sdkwork.deployment.config.json",
+    "standardOwner": "sdkwork-platform"
   }
 }
