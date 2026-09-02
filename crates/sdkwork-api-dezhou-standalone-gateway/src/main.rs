@@ -2,7 +2,7 @@ use sdkwork_api_dezhou_assembly::assemble_api_router;
 use sdkwork_iam_web_adapter::{
     build_web_framework_builder, iam_web_request_context_resolver_from_env,
 };
-use sdkwork_web_bootstrap::{infra_public_path_prefixes, ComposedApiAssembly};
+use sdkwork_web_bootstrap::{ApiModuleRegistry, ComposedApiAssembly, infra_public_path_prefixes};
 
 #[tokio::main]
 async fn main() {
@@ -25,7 +25,10 @@ async fn main() {
         assembly.route_manifest.clone(),
         infra_public_path_prefixes(),
     );
-    let hosted = ComposedApiAssembly::try_compose("SDKWork Dezhou API", vec![assembly])
+    let mut module_registry = ApiModuleRegistry::new();
+    module_registry.add_modules(vec![assembly]);
+    let hosted = module_registry
+        .try_compose("SDKWork Dezhou API")
         .expect("dezhou API composition failed")
         .into_hosted(framework);
     let app = hosted

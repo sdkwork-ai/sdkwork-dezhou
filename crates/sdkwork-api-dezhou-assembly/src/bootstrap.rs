@@ -3,9 +3,7 @@
 use axum::Router;
 use sdkwork_database_sqlx::DatabasePool;
 use sdkwork_dezhou_service_host::DezhouServiceHost;
-use sdkwork_web_bootstrap::{
-    ApiAssemblyContribution, HttpRouteManifest, PgPoolReadinessCheck, ReadinessCheck,
-};
+use sdkwork_web_bootstrap::{ApiAssemblyContribution, HttpRouteManifest, PgPoolReadinessCheck, ReadinessCheck, WebModule};
 use std::sync::Arc;
 
 pub type ApiAssembly = ApiAssemblyContribution;
@@ -53,4 +51,17 @@ pub async fn assemble_api_router_with_service(
 
 pub async fn assemble_business_routes() -> Result<ApiAssembly, String> {
     assemble_api_router().await
+}
+
+/// Canonical Web Module definition for this application
+/// (API_ASSEMBLY_SPEC §4.1.1): the complete HTTP surface — every route,
+/// manifest, and OpenAPI document of this owner — as one installable module.
+pub async fn web_module() -> Result<WebModule, String> {
+    Ok(WebModule::from_contribution(assemble_api_router().await?))
+}
+
+/// Same as [`web_module`] but composed on a process-shared database pool
+/// (platform gateways, API_ASSEMBLY_SPEC §4.1.1).
+pub async fn web_module_with_pool(pool: DatabasePool) -> Result<WebModule, String> {
+    Ok(WebModule::from_contribution(assemble_api_router_with_pool(pool).await?))
 }
