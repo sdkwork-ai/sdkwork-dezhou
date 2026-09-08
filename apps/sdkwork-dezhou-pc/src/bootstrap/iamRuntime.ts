@@ -10,6 +10,7 @@ import { normalizeSdkworkApiBaseUrl } from '@sdkwork/runtime-bootstrap';
 import { createClient as createDezhouAppClient } from '@sdkwork/dezhou-app-sdk';
 
 import type { SdkworkDezhouPcRuntimeConfig } from './environment';
+import { resolveSharedSdkApiBaseUrl } from './resolveSdkApiBaseUrl';
 import {
   createSdkworkDezhouPcSessionStore,
   SDKWORK_DEZHOU_PC_SESSION_STORAGE_KEY,
@@ -116,7 +117,11 @@ function createAppbaseGeneratedAppClient(
 }
 
 function resolveAppbaseAppApiBaseUrl(config: SdkworkDezhouPcRuntimeConfig): string {
+  // The shared `SDKWORK_API_BASE_URL` key resolved through
+  // `@sdkwork/sdk-common` wins; the config-derived urls only survive as a
+  // fallback.
   return (
+    resolveSharedSdkApiBaseUrl() ??
     config.sdkBaseUrls?.dependencySdkBaseUrls?.[APPBASE_APP_SDK_FAMILY_ID]?.appApiBaseUrl ??
     config.appApiBaseUrl
   );

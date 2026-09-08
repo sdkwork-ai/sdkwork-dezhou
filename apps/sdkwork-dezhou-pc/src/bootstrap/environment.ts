@@ -1,4 +1,5 @@
 import manifest from '../../sdkwork.app.config.json';
+import { resolveSharedSdkApiBaseUrl } from './resolveSdkApiBaseUrl';
 
 export type SdkworkDezhouPcEnvironment = 'development' | 'test' | 'staging' | 'production';
 
@@ -113,9 +114,14 @@ export function resolveSdkworkDezhouPcRuntimeConfig(
   const sdkBaseUrl = envValue('VITE_SDKWORK_DEZHOU_PC_SDK_BASE_URL');
   const sdkBaseUrls = parseSdkBaseUrls(sdkBaseUrl);
   const defaultApiBase = manifest.runtime.apiBaseUrl.replace(/\/+$/u, '');
+  // The shared `SDKWORK_API_BASE_URL` key wins; the per-app keys only survive
+  // as a fallback. The shared resolver returns a bare origin, so the SDK API
+  // prefixes are re-applied here to keep the config shape unchanged.
+  const sharedApiOrigin = resolveSharedSdkApiBaseUrl()?.replace(/\/+$/u, '');
 
   return {
     appApiBaseUrl:
+      (sharedApiOrigin ? `${sharedApiOrigin}/app/v3/api` : undefined) ??
       envValue('VITE_SDKWORK_DEZHOU_PC_APP_API_BASE_URL') ??
       sdkBaseUrls?.appApiBaseUrl ??
       `${defaultApiBase}/app/v3/api`,
@@ -129,6 +135,7 @@ export function resolveSdkworkDezhouPcRuntimeConfig(
       tokenStorage: 'browser-session',
     },
     backendApiBaseUrl:
+      (sharedApiOrigin ? `${sharedApiOrigin}/backend/v3/api` : undefined) ??
       envValue('VITE_SDKWORK_DEZHOU_PC_BACKEND_API_BASE_URL') ?? sdkBaseUrls?.backendApiBaseUrl,
     buildMode: environment,
     configProfile: profileByEnvironment[environment],
