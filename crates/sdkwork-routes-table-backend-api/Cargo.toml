@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-routes-table-backend-api"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "SDKWork dezhou table backend-api router."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_routes_table_backend_api"
 path = "src/lib.rs"

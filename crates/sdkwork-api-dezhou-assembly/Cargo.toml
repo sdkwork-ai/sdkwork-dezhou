@@ -1,9 +1,13 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-api-dezhou-assembly"
 edition.workspace = true
 version.workspace = true
 description = "Generated API assembly for sdkwork-dezhou application HTTP plane."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_api_dezhou_assembly"
 path = "src/lib.rs"

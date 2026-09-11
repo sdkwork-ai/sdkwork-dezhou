@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-dezhou-service-host"
 edition.workspace = true
 version.workspace = true
 license = "Apache-2.0"
 description = "In-process Dezhou table service container for gateway assembly."
 
+
+[lints]
+workspace = true
 [dependencies]
 sdkwork-database-sqlx.workspace = true
 sdkwork_dezhou_database_host.workspace = true

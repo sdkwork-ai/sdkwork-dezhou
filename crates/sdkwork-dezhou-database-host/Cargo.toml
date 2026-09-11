@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-dezhou-database-host"
 version.workspace = true
 edition.workspace = true
 license = "Apache-2.0"
 description = "SDKWork dezhou database lifecycle host."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_dezhou_database_host"
 path = "src/lib.rs"
