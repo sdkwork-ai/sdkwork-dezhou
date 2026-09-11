@@ -1,3 +1,11 @@
+# Shared log rotation policy (OPERATIONS_SPEC.md §2.3): every service rotates
+# at 10MB, keeping 3 files, so container logs cannot fill the host disk.
+x-default-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   dezhou-api:
     build:
@@ -21,6 +29,7 @@ services:
       - /etc/sdkwork/database/database.secret:/etc/sdkwork/database/database.secret:ro
     depends_on:
       - postgres
+    logging: *default-logging
 
   postgres:
     image: postgres:16
@@ -30,3 +39,4 @@ services:
       POSTGRES_DB: sdkwork_ai_prod
     ports:
       - "5433:5432"
+    logging: *default-logging
