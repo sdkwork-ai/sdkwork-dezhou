@@ -17,7 +17,7 @@
     "generated": false,
     "private": true,
     "manifests": [
-      "sdkwork.app.config.json"
+      "agent.app.config.json"
     ]
   },
   "canonicalSpecs": [
@@ -42,7 +42,7 @@
       "src/bootstrap/index.ts"
     ],
     "runtimeEntrypoints": [
-      "sdkwork.app.config.json",
+      "agent.app.config.json",
       "package.json",
       "index.html",
       "vite.config.ts",
@@ -62,7 +62,7 @@
       "sdkwork-iam-app-sdk"
     ],
     "configKeys": [
-      "sdkwork.app.config.json",
+      "agent.app.config.json",
       "config/browser/runtime-env.production.example.json"
     ]
   },

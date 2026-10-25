@@ -34,4 +34,4 @@ The dev server listens on port 3001.
 - Architecture: `../../../sdkwork-specs/APP_PC_ARCHITECTURE_SPEC.md`
 - UI: `../../../sdkwork-specs/APP_PC_REACT_UI_SPEC.md`
 - IAM: `../../../sdkwork-specs/IAM_LOGIN_INTEGRATION_SPEC.md`
-- Manifest: `sdkwork.app.config.json`
+- Manifest: `agent.app.config.json`

@@ -22,12 +22,12 @@ Do not copy root standard text into this application. If these paths do not reso
 
 ## Application Identity
 
-This directory is the SDKWork PC application root for `sdkwork-dezhou-pc`. Read `sdkwork.app.config.json` only before changing application behavior, runtime config, SDK wiring, release metadata, app-owned capabilities, package identity, or publishing metadata.
+This directory is the SDKWork PC application root for `sdkwork-dezhou-pc`. Read `agent.app.config.json` only before changing application behavior, runtime config, SDK wiring, release metadata, app-owned capabilities, package identity, or publishing metadata.
 
 ## Local Dictionary Structure
 
 - `AGENTS.md`: application agent entrypoint and relative SDKWork spec index.
-- `sdkwork.app.config.json`: SDKWork App Manifest v3 identity, release, publish, and environment source of truth.
+- `agent.app.config.json`: SDKWork App Manifest v3 identity, release, publish, and environment source of truth.
 - `specs/`: application component contract and local narrowing rules.
 - `config/`: safe runtime config examples for browser profiles.
 - `packages/`: PC core, commons, shell, dashboard, auth, and i18n packages.
@@ -39,7 +39,7 @@ This directory is the SDKWork PC application root for `sdkwork-dezhou-pc`. Read 
 Use dynamic progressive loading:
 
 1. Read this `AGENTS.md`.
-2. Read `sdkwork.app.config.json` only for app behavior, runtime config, SDK wiring, release, or package identity changes.
+2. Read `agent.app.config.json` only for app behavior, runtime config, SDK wiring, release, or package identity changes.
 3. Read `specs/README.md` and `specs/component.spec.json` only when local component contracts are touched.
 4. Read `.sdkwork/README.md`, `.sdkwork/skills/`, and `.sdkwork/plugins/` only when local agent extensions are relevant.
 5. Read `../../../sdkwork-specs/README.md`, then only the task-specific root specs.

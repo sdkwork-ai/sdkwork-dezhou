@@ -97,7 +97,7 @@
         "sdkDependencies": [],
         "routeManifest": null,
         "runtimeEntrypoints": [
-          "sdkwork.app.config.json",
+          "agent.app.config.json",
           "package.json",
           "index.html",
           "vite.config.ts",

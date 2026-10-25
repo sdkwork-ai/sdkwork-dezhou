@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 WORKDIR /app
 COPY --from=builder /build/target/release/sdkwork-dezhou-api-server /app/sdkwork-dezhou-api-server
 COPY database /app/database
-COPY sdkwork.app.config.json /app/sdkwork.app.config.json
+COPY agent.app.config.json /app/agent.app.config.json
 ENV SDKWORK_DEZHOU_APP_ROOT=/app
 ENV DEZHOU_API_BIND=0.0.0.0:8096
 EXPOSE 8096

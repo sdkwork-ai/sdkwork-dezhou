@@ -6,7 +6,7 @@
     "name": "SDKWork Dezhou",
     "repository": "sdkwork-ai/sdkwork-dezhou",
     "sourcePath": ".",
-    "configPath": "sdkwork.app.config.json"
+    "configPath": "agent.app.config.json"
   },
   "release": {
     "artifactPrefix": "sdkwork-dezhou",
